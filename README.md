@@ -4,7 +4,7 @@ Supports multiple languages and follows accessibility guidelines for a more open
 
 ## Contributors:
 
-Jack Gilbert (a.k.a. jglypt) / [@jackgilbee](https://github.com/jackgilbee)
+Jack (a.k.a. jglypt) / [@jackgilbee](https://github.com/jackgilbee)
 
 Adnan Bukvic (a.k.a. aridan) / [@actuallyaridan](https://github.com/actuallyaridan)
 
