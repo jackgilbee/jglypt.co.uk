@@ -79,8 +79,8 @@ h2{
 }
 
 :root {
-  --accent-color: 70, 130, 180; /* A soothing steel blue */
-  --darker-accent-color: 49, 90, 126; /* A darker shade of the steel blue for contrast */
+  --accent-color: 255, 69, 56; /* A soothing steel blue */
+  --darker-accent-color: 0, 0, 0; /* A darker shade of the steel blue for contrast */
 }
 
 /*Scales down emojis*/
@@ -547,8 +547,8 @@ menu.mobileMenu>li>a {
 .instagram {
   background-color: #8eecff;
   background-color: #00c3ce80;
-  border: #FB7833 2px solid;
-  border: #FB783380 2px solid;
+  border: #8eecff 2px solid;
+  border: #00c3ce80 2px solid;
   transition: background-color 0.2s;
 }
 
@@ -1484,7 +1484,7 @@ color: black;
 
 #activityTime{
   display: inline;
-  font-family: SevenSegment, monospace, Jost, sans-serif;
+  font-family: SevenSegment, mono, Jost, sans-serif;
 } 
 
 label, li>p {

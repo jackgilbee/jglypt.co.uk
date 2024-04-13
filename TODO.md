@@ -1,6 +1,6 @@
 # Introduction 
 
-This file contains all plans for aridan.net.
+This file contains all plans for jglypt.co.uk.
 
 ## Ideas
 
