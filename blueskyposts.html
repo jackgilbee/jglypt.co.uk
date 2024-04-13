@@ -24,6 +24,10 @@
 
 <body class="boxAlignment ">
     <header>
+        <p>This page is currently under development and will be available soon. Thank you for your patience. This will soon have my Bluesky posts :D - for now 
+            here is a post from a Bluesky dev - showing the embed post feature!
+        </p>
+        <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:p2cp5gopk7mgjegy6wadk3ep/app.bsky.feed.post/3kq2bg3mehp2a" data-bluesky-cid="bafyreigo4i3swwbxpqkl25hcz6w5fezijgrkubvqzgn6efiqzfvpwj7erm"><p lang="en">oh I don&#x27;t think anyone has mentioned yet - you can also create embeds by going to embed.bsky.app and pasting in a link to a post!<br><br><a href="https://bsky.app/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep/post/3kq2bg3mehp2a?ref_src=embed">[image or embed]</a></p>&mdash; Samuel 🦋 (<a href="https://bsky.app/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep?ref_src=embed">@samuel.bsky.team</a>) <a href="https://bsky.app/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep/post/3kq2bg3mehp2a?ref_src=embed">Apr 13, 2024 at 23:23</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
         <nav>
             <menu class="navWrapper">
                 <li>
@@ -63,40 +67,13 @@
                     <a class="navButton" href="settings"><img draggable="false" class="emoji" alt=""
                             src="/src/images/emojis/setttings.svg"> Settings</a>
                 </li>
-                <script>
-                    async function loadRSSFeed() {
-                        const feedUrl = 'https://cors-anywhere.herokuapp.com/https://bsky.app/profile/did:plc:4hawmtgzjx3vclfyphbhfn7v/rss';
-                        const response = await fetch(feedUrl);
-                        const data = await response.text();
-                        const parser = new DOMParser();
-                        const feed = parser.parseFromString(data, "application/xml");
-                        const items = feed.querySelectorAll("item");
-            
-                        let html = "<ul>";
-                        items.forEach(item => {
-                            const title = item.querySelector("title").textContent;
-                            const link = item.querySelector("link").textContent;
-                            html += `<li><a href="${link}">${title}</a></li>`;
-                        });
-                        html += "</ul>";
-            
-                        document.getElementById("feed").innerHTML = html;
-                    }
-            
-                    loadRSSFeed();
-                </script>
+              
             </menu>
         </nav>
     </header>
     <main>
-        <h1>Projects</h1>
         <div>
             <div class="centererWrapper">
-                <section class="titleUnderText">
-                    <p class="subTitle">I like to goof around, no projects at the moment though!
-                        <img draggable="false" class="emoji" alt="" src="/src/images/emojis/happy.svg">
-                    </p>
-                </section>
             </div>
         </div>
     </main>
