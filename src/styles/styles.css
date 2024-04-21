@@ -34,6 +34,56 @@ body {
   gap: 10px;
 }
 
+/* Styles for the bluesky-feed container */
+.bluesky-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Styles for individual posts */
+.post {
+  background-color: #ffffff; /* Change this to match your color scheme */
+  color: #333333; /* Change this for text color */
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Or max-width for larger screens */
+  max-width: 600px; /* Adjust as needed */
+}
+
+.post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.post p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post a {
+  display: inline-block;
+  background-color: #007bff; /* Change this for link/button color */
+  color: #ffffff; /* Change this for link/button text color */
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post a:hover {
+  background-color: #0056b3; /* Change this for link/button hover color */
+}
 
 /*Import the local Jost font files instead of using Google Fonts to use them*/
 @font-face {
