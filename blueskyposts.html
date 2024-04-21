@@ -20,6 +20,7 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/src/favicons/icon-512.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/src/favicons/icon-192.png">
     <link rel="manifest" href="/src/favicons/site.webmanifest">
+    <script src="https://bluesky-posts.k67f2fmjmj.workers.dev/"></script>
 </head>
 
 <body class="boxAlignment ">
@@ -73,25 +74,78 @@
             </div>
         </main>
         <script>
-            // JavaScript code to load and display the posts
-            async function loadBlueskyPosts() {
-                const workerUrl = 'https://bluesky-posts.k67f2fmjmj.workers.dev';
-                try {
-                    const response = await fetch(workerUrl);
-                    if (response.ok && response.headers.get("Content-Type").includes("application/json")) {
-                        const posts = await response.json();
-                        const container = document.getElementById('bluesky-feed');
-                        container.innerHTML = ''; // Clear existing content
-                        // Process and display each post
-                        // ... (Your code to create post elements goes here) ...
-                    } else {
-                        console.error('Response not OK or not JSON:', response);
-                    }
-                } catch (error) {
-                    console.error('Failed to load posts:', error);
-                }
-            }
-            document.addEventListener('DOMContentLoaded', loadBlueskyPosts);
+  async function loadBlueskyPosts() {
+    const workerUrl = 'https://bluesky-posts.k67f2fmjmj.workers.dev/'; // Replace with your Cloudflare worker URL
+    try {
+      const response = await fetch(workerUrl);
+      if (response.ok && response.headers.get("Content-Type").includes("application/json")) {
+        const posts = await response.json();
+        const container = document.getElementById('bluesky-feed');
+        container.innerHTML = ''; // Clear existing content
+        // Process and display each post
+        posts.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.classList.add('post');
+
+          if (post.title) {
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = parseCDATA(post.title) || "Untitled"; // Parse CDATA content
+            postElement.appendChild(titleElement);
+          }
+
+          if (post.description) {
+            const descriptionElement = document.createElement('p');
+            descriptionElement.innerHTML = parseCDATA(post.description); // Parse CDATA content
+            postElement.appendChild(descriptionElement);
+          }
+
+          const postInfoElement = document.createElement('div');
+          postInfoElement.classList.add('post-info');
+
+          if (post.pubDate) {
+            const dateElement = document.createElement('p');
+            dateElement.classList.add('post-date'); // Add class for styling
+            dateElement.textContent = formatDate(post.pubDate);
+            postInfoElement.appendChild(dateElement);
+          }
+
+          if (post.link) {
+            const linkUrl = parseCDATA(post.link); // Parse CDATA content
+            const linkElement = document.createElement('a');
+            linkElement.href = linkUrl;
+            linkElement.textContent = "Read more";
+            linkElement.target = "_blank"; // Open link in new tab
+            postInfoElement.appendChild(linkElement);
+          }
+
+          postElement.appendChild(postInfoElement);
+
+          container.appendChild(postElement);
+        });
+      } else {
+        console.error('Response not OK or not JSON:', response);
+      }
+    } catch (error) {
+      console.error('Failed to load posts:', error);
+    }
+  }
+
+  function parseCDATA(content) {
+    const startIdx = content.indexOf('<![CDATA[');
+    const endIdx = content.indexOf(']]>');
+    if (startIdx !== -1 && endIdx !== -1) {
+      return content.substring(startIdx + 9, endIdx); // Extract content within CDATA tags
+    } else {
+      return content; // Return original content if no CDATA tags found
+    }
+  }
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  document.addEventListener('DOMContentLoaded', loadBlueskyPosts);
         </script>
       
     <footer class="footer">

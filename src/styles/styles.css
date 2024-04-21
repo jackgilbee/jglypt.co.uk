@@ -44,25 +44,21 @@ body {
 
 /* Styles for individual posts */
 .post {
-  background-color: #ffffff; /* Change this to match your color scheme */
-  color: #333333; /* Change this for text color */
+  background-color: #1da1f2; /* Twitter blue background color */
+  color: #ffffff; /* White text color */
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   width: 100%; /* Or max-width for larger screens */
   max-width: 600px; /* Adjust as needed */
+  display: flex; /* Add this line to make post content flex */
+  flex-direction: column; /* Add this line to stack content vertically */
 }
 
 .post h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-}
-
-.post img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
 }
 
 .post p {
@@ -71,10 +67,19 @@ body {
   margin-bottom: 10px;
 }
 
+.post-info {
+  display: flex; /* Add this line to make post info flex */
+  justify-content: space-between; /* Add this line to evenly distribute content */
+  align-items: center; /* Add this line to vertically center content */
+}
+
+.post-info .post-date {
+  color: #ffffff; /* White text color for post date */
+}
+
 .post a {
-  display: inline-block;
-  background-color: #007bff; /* Change this for link/button color */
-  color: #ffffff; /* Change this for link/button text color */
+  background-color: #ffffff; /* White background color for link/button */
+  color: #1da1f2; /* Twitter blue text color */
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -82,8 +87,10 @@ body {
 }
 
 .post a:hover {
-  background-color: #0056b3; /* Change this for link/button hover color */
+  background-color: #f5f8fa; /* Light gray on hover */
 }
+
+
 
 /*Import the local Jost font files instead of using Google Fonts to use them*/
 @font-face {
