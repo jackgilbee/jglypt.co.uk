@@ -75,7 +75,7 @@
             </div>
         </main>
         <script>
-  async function loadBlueskyPosts() {
+async function loadBlueskyPosts() {
     const workerUrl = 'https://bluesky-posts.k67f2fmjmj.workers.dev/'; // Replace with your Cloudflare worker URL
     try {
       const response = await fetch(workerUrl);
@@ -95,8 +95,22 @@
           }
 
           if (post.description) {
-            const descriptionElement = document.createElement('p');
-            descriptionElement.innerHTML = parseCDATA(post.description); // Parse CDATA content
+            const descriptionElement = document.createElement('div');
+            descriptionElement.classList.add('post-description');
+
+            const descriptionContent = parseCDATA(post.description); // Parse CDATA content
+            descriptionElement.innerHTML = descriptionContent;
+
+            // Search for image URLs in the description and create image elements
+            const imageRegex = /<img.*?src="(.*?)".*?>/g;
+            let match;
+            while ((match = imageRegex.exec(descriptionContent)) !== null) {
+              const imageUrl = match[1];
+              const imageElement = document.createElement('img');
+              imageElement.src = imageUrl;
+              descriptionElement.appendChild(imageElement);
+            }
+
             postElement.appendChild(descriptionElement);
           }
 
@@ -131,22 +145,30 @@
     }
   }
 
-  function parseCDATA(content) {
+function parseCDATA(content) {
     const startIdx = content.indexOf('<![CDATA[');
     const endIdx = content.indexOf(']]>');
     if (startIdx !== -1 && endIdx !== -1) {
-      return content.substring(startIdx + 9, endIdx); // Extract content within CDATA tags
+        return content.substring(startIdx + 9, endIdx); // Extract content within CDATA tags
     } else {
-      return content; // Return original content if no CDATA tags found
+        return content; // Return original content if no CDATA tags found
     }
-  }
+}
 
-  function formatDate(dateString) {
+function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-  }
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric'
+    };
+    return date.toLocaleDateString('en-US', options);
+}
 
-  document.addEventListener('DOMContentLoaded', loadBlueskyPosts);
+document.addEventListener('DOMContentLoaded', loadBlueskyPosts);
         </script>
         
         <div>
