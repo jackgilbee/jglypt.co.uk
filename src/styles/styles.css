@@ -44,7 +44,7 @@ body {
 
 /* Styles for individual posts */
 .post {
-  background-color: #1da1f2; /* Twitter blue background color */
+  background: linear-gradient(to bottom, #0f7fff, #58b9ff); /* Bluesky gradient background */
   color: #ffffff; /* White text color */
   margin-bottom: 20px;
   padding: 15px;
@@ -89,6 +89,7 @@ body {
 .post a:hover {
   background-color: #f5f8fa; /* Light gray on hover */
 }
+
 
 
 
