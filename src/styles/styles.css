@@ -81,7 +81,7 @@ body {
 
 .post a {
   background-color: #ffffff; /* White background color for link/button */
-  color: #1da1f2; /* Twitter blue text color */
+  color: #bd540e; /* Twitter blue text color */
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -565,15 +565,15 @@ menu.mobileMenu>li>a {
 }
 
 .twitter {
-  background-color: #1da0f2;
-  background-color: #1da0f280;
-  border: #1da0f280 2px solid;
+  background-color: #f2721d;
+  background-color: #7b2700ad;
+  border: #8b1e0080 2px solid;
   transition: background-color 0.2s;
 }
 
 .twitter:hover {
-  background-color: #1da0f2;
-  background-color: #1da0f2c7;
+  background-color: #522513;
+  background-color: #ffc859c7;
   transition: background-color 0.2s;
 }
 
