@@ -1,147 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#161616">
-    <title>Home — jglypt</title>
-    <meta name="description" content="an amazing website made by @jglypt (Jack)">
-    <meta name="keywords" content="website, Jack, @jglypt">
-    <meta name="author" content="Jack">
-    <meta name="twitter:card" content="jack / Jack's amazing website">
-    <meta name="twitter:site" content="@jglypt">
-    <meta name="twitter:title" content="Home">
-    <meta name="twitter:image" content="">
-    <meta name="twitter:description" content="jglypt / Jack's amazing website">
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="jglypt / Jack's amazing website">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="https://jglypt.co.uk">
-    <link href="/src/styles/styles.css" rel="stylesheet">
-    <script src="/src/scripts/settings.js"></script>
-    <script src="/src/scripts/dropDownMenu.js"></script>
-    <script src="/src/scripts/mobileMenu.js"></script>
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/src/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/src/favicons/icon-512.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/src/favicons/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/src/favicons/icon-512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/src/favicons/icon-192.png">
-    <link rel="manifest" href="/src/favicons/site.webmanifest">
-
+    <title>Social Media Landing Page</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
 </head>
-
-<body class="boxAlignment ">
-    <header>
-        <nav>
-            <menu class="navWrapper">
-                <li>
-                    <a class="navButton activeChoice" href="/"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/house.svg"> Home</a>
-                </li>
-                <li>
-                    <a class="navButton" href="projects"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/tools.svg"> Projects</a>
-                </li>
-                <li>
-                    <a class="navButton" href="contact"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/speak.svg"> Socials!</a>
-                </li>
-                <li>
-                    <a class="navButton right-link" href="settings"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/setttings.svg"> Settings</a>
-                </li>
-                <li>
-                    <a class="navButton" href="blueskyposts"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/speak.svg"> Bluesky Posts!</a>
-                </li>
-            </menu>
-            <menu class="navWrapperMobile">
-                <li>
-                    <a class="navButton activeChoice" href="/">jglypt.co.uk</a>
-                </li>
-                <li>
-                    <button onclick="toggleMenu()" type="button" class="navButton right-link">
-                        <img draggable="false" class="emoji" alt="" src="/src/images/icons/menu.svg">
-                        Menu
-                    </button>
-                </li>
-            </menu>
-            <menu class="mobileMenu" id="mobileMenuID">
-                <li>
-                    <a class="navButton" href="projects"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/tools.svg"> Projects</a>
-                </li>
-                <li>
-                    <a class="navButton" href="contact"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/speak.svg"> Socials!</a>
-                </li>
-                <li>
-                    <a class="navButton" href="settings"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/setttings.svg"> Settings</a>
-                </li>
-                <li>
-                    <a class="navButton" href="blueskyposts"><img draggable="false" class="emoji" alt=""
-                            src="/src/images/emojis/speak.svg"> Bluesky Posts!</a>
-                </li>
-            </menu>
-        </nav>
-    </header>
-    <main>
-        <h1>Home</h1>
-        <div>
-            <div class="centererWrapper">
-                <section class="titleUnderText">
-                    <p class="subTitle">Hey! It's me Jack (also @jglypt on socials!) welcome to my website!
-                        This is currently pretty boring but I will continue to work on it :D
-                    </p>
-                </section>
-                <p class="subTitleExp">About me</p>
-                <section class="project" id="bio">
-                   <h2 class="projectName">Jack, also known as @jglypt
-                   </h2>
-                    <p class="projectDesc">I'm taking my GCSEs 
-                        in the Channel Islands. I like playing the guitar and I also like  
-                       tech hardware & 
-                        software, along with messing around in Linux!</p>
-                    <div class="projectStuff">
-                        <p class="projectStatus"><img draggable="false" class="emoji" alt=""
-                                src="/src/images/emojis/clock.svg"><br>15 years old</p>
-                        <p class="projectLearned"><img draggable="false" class="emoji" alt=""
-                                src="/src/images/emojis/globe.svg"><br><span class="langProf">fluent:</span>
-                            English
-                            <span class="langProf"><br>speaks:</span> A bit of Spanish
-                        </p>
-                    </div>
-                </section>
-                <section class="project" id="tech">
-                   <h2 class="projectName">Technology</h2>
-                    <p class="projectDesc">I own a bunch of different tech. Here are my most important ones:</p>
-                    <div class="projectStuff">
-                        <p class="projectStatus"><img draggable="false" class="emoji" alt=""
-                                src="/src/images/emojis/phone.svg"><br><span class="langProf">Phone:<br></span>iPhone SE (2020, Black, 64GB)
-                            </p>
-                        <p class="projectStatus"><img draggable="false" class="emoji" alt=""
-                                src="/src/images/emojis/laptop.svg"><br><span class="langProf">Laptop:<br></span>Crappy lenovo laptop
-                            <br>(15", 2022, <br>AMD Radeon 3020e, 8GB/256GB)</p>
-                        <p class="projectLearned"><img draggable="false" class="emoji" alt=""
-                                src="/src/images/emojis/computer.svg"><br><span class="langProf">Computer:<br></span>
-                            Mac mini (2022)<br>M2 base model <br>8GB RAM<br>macOS
-                            Sonoma
-                        </p>
-                    </div>
-            </div>
+<body>
+    <div class="container">
+        <h1>Welcome to My Social Media Hub</h1>
+        <div class="profile-photo">
+            <img src="src/favicons/icon-512.png" alt="Profile Photo">
         </div>
-    </main>
-    <footer class="footer">
-        <a rel="me" href="https://mastodon.social/@jglypt">Mastodon</a>
-        <p>Any copyrighted material (as in album art, application icons or similar) displayed on this website is
-            owned by their respective copyright holder. <br>No images are stored directly on this website. No
-            copyright infringement is intended. <br>Contact jack@jglypt.co.uk for takedowns of copyrighted material.
-        </p>
-        <p>© Copyright 2024 by Jack unless stated otherwise. This project uses the MIT license.</p>
-        <p>Twemoji by Twitter Inc/X Corp is licensed under CC-BY 4.0.</p>
-    </footer>
+        <div class="social-links">
+            <a href="https://twitter.com/jglypt" target="_blank"><img src="src/favicons/X from Photopea.png" alt="X Logo"></a>
+            <a href="https://bsky.app/profile/jglypt.co.uk" target="_blank"><img src="src/favicons/Blueky.png" alt="Bluesky Logo"></a>
+            <a href="https://www.threads.net/@jglypt" target="_blank"><img src="src/favicons/Threads.png" alt="Threads Logo"></a>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
-
 </html>
