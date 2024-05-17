@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jglypt</title>
-    <link rel="stylesheet" href="src/styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="/src/scripts/twimojiFix.js"></script>
+    <script src="/src/scripts/darkLightMode.js"></script>
 </head>
 <body>
     <header class="container">
         <section class="transparent-box">
-            <img src="src/favicons/icon-512.png" alt="Profile Picture" class="profile-pic">
+            <img src="src/images/icon-192.png" alt="Jack" class="profile-pic">
             <h1 class="header">jglypt</h1>
-            <nav class="links">
+            <div class="links">
                 <a href="https://www.x.com/jglypt" target="_blank" rel="noopener noreferrer">
-                    <svg src="src/images/X.svg" alt="X" class="social-icon"></svg><br> X
+                    <img src="src/images/X.svg" alt="X" class="social-icon x"><br> X
                 </a>
                 <a href="https://bsky.app/profile/jglypt.co.uk" target="_blank" rel="noopener noreferrer">
-                    <svg img src="src/images/Bluesky.svg" alt="Bluesky" class="social-icon"></svg><br> Bluesky
+                    <img src="src/images/Bluesky.svg" alt="Bluesky" class="social-icon bluesky"><br> Bluesky
                 </a>
                 <a href="https://www.threads.net/@jglypt" target="_blank" rel="noopener noreferrer">
-                    <svg src="src/images/Threads.svg" alt="Threads" class="social-icon"></svg><br> Threads
+                    <img src="src/images/Threads.svg" alt="Threads" class="social-icon threads"><br> Threads
                 </a>
-            </nav>
+            </div>
         </section>
     </header>    
     <footer>
         <button id="mode-toggle">🌞</button>
     </footer>
-    <script src="scripts.js"></script>
 </body>
 </html>

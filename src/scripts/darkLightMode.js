@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         links.forEach(link => {
             link.style.color = document.body.classList.contains('light-mode') ? 'black' : 'white';
         });
-        modeToggle.textContent = document.body.classList.contains('light-mode') ? '🌜' : '🌞';
+        modeToggle.innerHTML = document.body.classList.contains('light-mode') ? '<img draggable="false" class="emoji" alt="🌑" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f311.svg">' : '<img draggable="false" class="emoji" alt="🌞" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f31e.svg">';
     });
 
     // Generate shapes

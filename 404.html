@@ -1,53 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#161616">
-    <title>404 (Not Found) — jglypt</title>
-    <link href="/src/styles/styles.css" rel="stylesheet">
-    <script src="/src/scripts/settings.js"></script>
-    <script src="/src/scripts/dropDownMenu.js"></script>
-    <script src="/src/scripts/mobileMenu.js"></script>
-    <script src="/src/scripts/emailModalBox.js"></script>
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/src/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="/src/favicons/icon-512.png">
-    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/src/favicons/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/src/favicons/icon-512.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/src/favicons/icon-192.png">
-    <link rel="manifest" href="/src/favicons/site.webmanifest">
-
+    <title>404 / jglypt</title>
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="/src/scripts/twimojiFix.js"></script>
+    <script src="/src/scripts/darkLightMode.js"></script>
 </head>
-
-<body class="boxAlignment">
-    <header>
-        <nav>
-            <div class="p404Wrapper">
-                <a class="navButton" href="/"><img draggable="false" class="emoji" alt=""
-                        src="/src/images/emojis/house.svg"> Home</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1>404 / Not Found</h1>
-        <div>
-            <div class="centererWrapper">
-                <section class="titleUnderText">
-                    <p class="subTitle">Luckily you didn't break the internet this time!</p>
-                    <p class="subTitle">The page you're looking for cannot be found. If you entered the URL manually, please check
-                        the URL and try again, otherwise the page was probably moved or deleted.</p>
-                </section>
-            </div>
-        </div>
-
-
-        </div>
-    </main>
-    <footer class="footer">
-        <p>© Copyright 2024 by Jack Gilbert unless stated otherwise. This project uses the MIT license.</p>
-        <p>Twemoji by Twitter Inc/X Corp is licensed under CC-BY 4.0.</p>
+<body>
+    <header class="container">
+        <section class="transparent-box">
+            <img src="src/images/icon-192.png" alt="Jack" class="profile-pic">
+            <h1 class="header">404</h1>
+            <p>I have no idea what you're looking for, but you can't find it here.</p>
+        </section>
+    </header>    
+    <footer>
+        <button id="mode-toggle">🌞</button>
     </footer>
 </body>
-
 </html>
