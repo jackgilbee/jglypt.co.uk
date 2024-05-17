@@ -23,7 +23,7 @@ body {
   font-family: Oxygen, sans-serif;
   background-color: #1a1a1a;
   color: white;
-  overflow: scroll;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
