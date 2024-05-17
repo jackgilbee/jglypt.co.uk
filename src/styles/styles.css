@@ -1,85 +1,162 @@
-/* styles.css */
 body {
-  font-family: Arial, sans-serif;
-  color: #fff; /* White text color */
-  background-color: #1a1a1a; /* Dark grey background */
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  color: #fff; /* White text color */
-}
-
-.profile-photo {
-  margin-bottom: 20px; /* Add some space between photo and links */
-}
-
-.profile-photo img {
-  width: 100px; /* Adjust the width of the profile photo */
-  height: auto;
-  display: block;
-  border-radius: 10px; /* Rounded corners */
-  border: 2px solid #333; /* Dark grey border */
-  margin: 0 auto; /* Center the photo */
-}
-
-.social-links {
-  margin-top: 20px;
-}
-
-.social-links a {
-  display: inline-block;
-  margin: 10px; /* Adjust margin for spacing */
-  padding: 20px 30px; /* Increase padding for larger buttons */
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px; /* Rounded corners */
   position: relative;
+  z-index: 2;
+}
+
+.transparent-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transparent-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #ff3b30;
+}
+
+.header {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #ff3b30;
+  font-weight: 700;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 10px;
+  border: 2px solid #ff3b30;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.links a:hover {
+  background: #ff3b30;
+  color: black;
+  box-shadow: 0 4px 15px rgba(255, 59, 48, 0.5);
+}
+
+#mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #ff3b30;
+  z-index: 2;
+}
+
+.shapes-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   overflow: hidden;
+  z-index: 1;
 }
 
-.social-links img {
-  width: 50px; /* Adjust size of logos */
-  height: auto;
+.shape {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: rgba(255, 59, 48, 0.5);
+  border-radius: 50%;
+  animation: float 5s infinite ease-in-out;
 }
 
-.social-links a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 0, 0, 0) 50%, rgba(255, 0, 0, 0.3) 70%, rgba(255, 0, 0, 0.5) 80%, rgba(255, 0, 0, 0.7) 90%, rgba(255, 0, 0, 0.9) 100%);
-  transition: transform 0.5s ease;
-  transform: translate(-50%, -50%) scale(0);
+.shape.square {
+  border-radius: 0;
 }
 
-.social-links a:hover::after {
-  transform: translate(-50%, -50%) scale(1);
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid rgba(255, 59, 48, 0.5);
+  background: none;
 }
 
-.section {
-  margin-top: 50px;
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 
-.section h2 {
-  color: #fff;
+body.light-mode {
+  background-color: #f0f0f0;
+  color: black;
 }
 
-.section p {
-  color: #ddd;
+body.light-mode .transparent-box {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+body.light-mode .links a {
+  color: black;
+  border-color: #ff3b30;
+}
+
+body.light-mode .header {
+  color: #ff3b30;
+}
+
+body.light-mode .links a:hover {
+  background: #ff3b30;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 59, 48, 0.5);
+}
+
+.social-icon {
+  width: 40px; /* Reduce the size from whatever it currently is */
+  height: 40px; /* Maintain aspect ratio */
+  padding: 10px; /* Add some padding around the icon */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds subtle shadow for depth */
+}
+
+#x {
+  fill: #1DA1F2;
+}
+
+#bluesky {
+  fill: #1785fb; 
+}
+
+#threads {
+  fill: #fc6c4c;
 }

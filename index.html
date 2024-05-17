@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Landing Page</title>
+    <title>jglypt</title>
     <link rel="stylesheet" href="src/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Social Media Hub</h1>
-        <div class="profile-photo">
-            <img src="src/favicons/icon-512.png" alt="Profile Photo">
-        </div>
-        <div class="social-links">
-            <a href="https://twitter.com/jglypt" target="_blank"><img src="src/favicons/X from Photopea.png" alt="X Logo"></a>
-            <a href="https://bsky.app/profile/jglypt.co.uk" target="_blank"><img src="src/favicons/Blueky.png" alt="Bluesky Logo"></a>
-            <a href="https://www.threads.net/@jglypt" target="_blank"><img src="src/favicons/Threads.png" alt="Threads Logo"></a>
-        </div>
-    </div>
+    <header class="container">
+        <section class="transparent-box">
+            <img src="src/favicons/icon-512.png" alt="Profile Picture" class="profile-pic">
+            <h1 class="header">jglypt</h1>
+            <nav class="links">
+                <a href="https://www.x.com/jglypt" target="_blank" rel="noopener noreferrer">
+                    <svg src="src/images/X.svg" alt="X" class="social-icon"></svg><br> X
+                </a>
+                <a href="https://bsky.app/profile/jglypt.co.uk" target="_blank" rel="noopener noreferrer">
+                    <svg img src="src/images/Bluesky.svg" alt="Bluesky" class="social-icon"></svg><br> Bluesky
+                </a>
+                <a href="https://www.threads.net/@jglypt" target="_blank" rel="noopener noreferrer">
+                    <svg src="src/images/Threads.svg" alt="Threads" class="social-icon"></svg><br> Threads
+                </a>
+            </nav>
+        </section>
+    </header>    
+    <footer>
+        <button id="mode-toggle">🌞</button>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
