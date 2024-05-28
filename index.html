@@ -12,11 +12,11 @@
 <body>
     <header class="container">
         <section class="transparent-box">
-            <img src="src/images/icon-192.png" alt="Jack" class="profile-pic">
+            <img id="header-profile-pic" src="src/images/icon-192.png" alt="Jack" class="profile-pic">
             <h1 class="header">jglypt</h1>
             <div class="links">
-                <a href="https://www.x.com/jglypt" target="_blank" rel="noopener noreferrer">
-                    <img src="src/images/X.svg" alt="X" class="social-icon x"><br> X
+                <a href="https://mastodon.social/@jglypt" target="_blank" rel="noopener noreferrer">
+                    <img src="src/images/Mastodon_logo.svg" alt="Mastodon" class="social-icon x"><br> Mastodon
                 </a>
                 <a href="https://bsky.app/profile/jglypt.co.uk" target="_blank" rel="noopener noreferrer">
                     <img src="src/images/Bluesky.svg" alt="Bluesky" class="social-icon bluesky"><br> Bluesky
@@ -26,7 +26,25 @@
                 </a>
             </div>
         </section>
+        <section>
+        <style>
+            .mastodon-box {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 20px;
+                width: 300px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                font-family: Arial, sans-serif;
+            }
+        </style>
+        </section>
     </header>    
+    <div class="mastodon-box" id="mastodon-status">
+        Loading latest status...
+    </div>
+
+    <script src="mastodon.js"></script>
+    
     <footer>
         <button id="mode-toggle">🌞</button>
     </footer>
