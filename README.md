@@ -1,4 +1,4 @@
-# <img src="/src/favicons/icon-192.png" width="32px" height="32px"> jglypt.co.uk
+# <img src="/src/images/icon-192.png" width="32px" height="32px"> jglypt.co.uk
 A website that shows all my links
 
 ## Contributors:
