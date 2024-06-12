@@ -223,6 +223,9 @@ body.light-mode .links a:hover {
 .mastodon-profile div {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .mastodon-profile .display-name {
